@@ -12,7 +12,7 @@
         <Image x:Name="Img_Init" HorizontalAlignment="Left" Height="163" Margin="180,155,0,0" VerticalAlignment="Top" Width="201" Source="/Ethernet.png" Visibility="Hidden"/>
         <Image x:Name="Img_result" HorizontalAlignment="Left" Height="185" Margin="182,138,0,0" VerticalAlignment="Top" Width="204" Source="/Errors.png" Visibility="Hidden"/>
 
-        <Button x:Name="Btn_TentarNovamente" Content="Tentar Novamente" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" Height="46" Width="173" FontFamily="Bahnschrift SemiBold Condensed" Click="Btn_TentarNovamente_Click" Visibility="Hidden"/>
-
+        <Button x:Name="Btn_Try_Again" Content="Tentar Novamente" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" Height="46" Width="173" FontFamily="Bahnschrift SemiBold Condensed" Click="Btn_Try_Again_Click" Visibility="Hidden"/>
+        
     </Grid>
 </Window>

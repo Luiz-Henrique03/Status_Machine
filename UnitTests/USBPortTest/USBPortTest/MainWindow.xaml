@@ -11,6 +11,6 @@
         <Label x:Name="Lbl_Main" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" Height="366" Width="435" FontFamily="Bahnschrift SemiBold Condensed" FontSize="28" FontWeight="Bold"/>
         <Image x:Name="Img_Result" HorizontalAlignment="Left" Height="173" Margin="174,127,0,0" VerticalAlignment="Top" Width="178" RenderTransformOrigin="1.645,-0.003" Source="/png-clipart-computer-icons-error-information-error-angle-triangle-thumbnail-removebg-preview.png" Visibility="Hidden"/>
         <Image x:Name="Img_Init" Margin="173,141,171,100" Source="/482493.png"/>
-        <Button x:Name="Btn_TentarNovamente" Content="Tentar Novamente" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" Height="46" Width="173" FontFamily="Bahnschrift SemiBold Condensed" Click="Btn_TentarNovamente_Click" Visibility="Hidden"/>
+        <Button x:Name="Btn_Try_Again" Content="Tentar Novamente" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" Height="46" Width="173" FontFamily="Bahnschrift SemiBold Condensed" Click="Btn_Try_Again_Click" Visibility="Hidden"/>
     </Grid>
 </Window>

@@ -37,7 +37,7 @@ namespace EthernetTest
             countDown = 3;
             Img_Init.Visibility = Visibility.Visible;
             Img_result.Visibility = Visibility.Hidden;
-            Btn_TentarNovamente.Visibility = Visibility.Hidden;
+            Btn_Try_Again.Visibility = Visibility.Hidden;
             Lbl_Main.Content = "";
             StartCountDown();
         }
@@ -118,7 +118,7 @@ namespace EthernetTest
                     }
                     else
                     {
-                        Console.WriteLine("Não foi possível encontraar conexão via cabo ethernet");
+                        Console.WriteLine("Não foi possível encontrar conexão via cabo ethernet");
                         return false;
                     }
                 }
@@ -168,8 +168,8 @@ namespace EthernetTest
                     Mensagem = "Computador não foi capaz de enviar pacote"
                 };
 
-                Btn_TentarNovamente.Visibility = Visibility.Visible;
-                Btn_TentarNovamente.Content = $"Tentar Novamente {Tries}";
+                Btn_Try_Again.Visibility = Visibility.Visible;
+                Btn_Try_Again.Content = $"Tentar Novamente {Tries}";
                 string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
                 JsonList.Add(jsonString);
                 JsonHandler.CreateStatusJson(jsonString);
@@ -177,7 +177,7 @@ namespace EthernetTest
 
         }
 
-        private void Btn_TentarNovamente_Click(object sender, RoutedEventArgs e)
+        private void Btn_Try_Again_Click(object sender, RoutedEventArgs e)
         {
             if (Tries > 0)
             {
@@ -189,6 +189,8 @@ namespace EthernetTest
                 Close();
             }
         }
+
+        
     }
 
     public class JsonHandler

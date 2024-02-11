@@ -38,7 +38,7 @@ namespace PingTest
             countDown = 3;
             Img_Init.Visibility = Visibility.Visible;
             Img_result.Visibility = Visibility.Hidden;
-            Btn_TentarNovamente.Visibility = Visibility.Hidden;
+            Btn_Try_Again.Visibility = Visibility.Hidden;
             Lbl_Main.Content = "";
             StartCountDown();
         }
@@ -149,15 +149,15 @@ namespace PingTest
                     Mensagem = "Computador não foi capaz de enviar pacote"
                 };
 
-                Btn_TentarNovamente.Visibility = Visibility.Visible;
-                Btn_TentarNovamente.Content = $"Tentar Novamente {Tries}";
+                Btn_Try_Again.Visibility = Visibility.Visible;
+                Btn_Try_Again.Content = $"Tentar Novamente {Tries}";
                 string jsonString = JsonConvert.SerializeObject(status, Formatting.Indented);
                 JsonList.Add(jsonString);
                 JsonHandler.CreateStatusJson(jsonString);
             }
         }
 
-        private void Btn_TentarNovamente_Click(object sender, RoutedEventArgs e)
+        private void Btn_Try_Again_Click(object sender, RoutedEventArgs e)
         {
             if (Tries > 0)
             {

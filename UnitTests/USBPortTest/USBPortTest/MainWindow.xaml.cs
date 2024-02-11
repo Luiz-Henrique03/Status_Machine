@@ -41,7 +41,7 @@ namespace USBPortTest
             countDownTimer.Tick += CountDownTimer_Tick;
             Img_Init.Visibility = Visibility.Visible;
             Img_Result.Visibility = Visibility.Hidden;
-            Btn_TentarNovamente.Visibility = Visibility.Hidden;
+            Btn_Try_Again.Visibility = Visibility.Hidden;
             Lbl_Main.Content = "";
             StartCountdown();
         }
@@ -90,7 +90,7 @@ namespace USBPortTest
                     result += "----------------------------------------\n";
                 }
 
-                Lbl_Main.FontSize = 14;
+                Lbl_Main.FontSize = 12;
 
                 Dispatcher.Invoke(() =>
                 {
@@ -132,9 +132,9 @@ namespace USBPortTest
                 Uri uriImagem = new Uri(caminhoImagem, UriKind.Relative);
                 BitmapImage imagemSource = new BitmapImage(uriImagem);
 
-                Btn_TentarNovamente.Visibility = Visibility.Visible;
+                Btn_Try_Again.Visibility = Visibility.Visible;
 
-                Btn_TentarNovamente.Content = $"Tentar Novamente {Tries}";
+                Btn_Try_Again.Content = $"Tentar Novamente {Tries}";
 
                 Img_Result.Source = imagemSource;
                 Img_Result.Visibility = Visibility.Visible;
@@ -167,7 +167,7 @@ namespace USBPortTest
             }
         }
 
-        private void Btn_TentarNovamente_Click(object sender, RoutedEventArgs e)
+        private void Btn_Try_Again_Click(object sender, RoutedEventArgs e)
         {
             if (Tries > 0)
             {
