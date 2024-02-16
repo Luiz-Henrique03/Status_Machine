@@ -1,0 +1,16 @@
+﻿<Window x:Class="SoundTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SoundTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="461" Width="543">
+    <Grid>
+        <Label x:Name="Lbl_Main" HorizontalAlignment="Left" Margin="79,58,0,0" VerticalAlignment="Top" Height="53" Width="414" FontFamily="Bahnschrift SemiBold Condensed" FontSize="28" FontWeight="Bold"/>
+        <Image x:Name="Img_Init" HorizontalAlignment="Center" Height="130" Margin="0,140,0,0" VerticalAlignment="Top" Width="180" Source="/Audio.png" Visibility="Hidden"/>
+        <TextBox x:Name="Txt_Result" HorizontalAlignment="Center" Margin="0,174,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180" Height="26" Visibility="Hidden"/>
+
+
+    </Grid>
+</Window>
