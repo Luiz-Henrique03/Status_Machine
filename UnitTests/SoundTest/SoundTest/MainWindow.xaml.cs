@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Speech.Synthesis;
 using System.Threading.Tasks;
@@ -7,6 +9,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using static SoundTest.JsonHandler;
 
 namespace SoundTest
 {
@@ -20,8 +23,9 @@ namespace SoundTest
         private DispatcherTimer SuccessTimer;
         private int Tries = 3;
         private int randomNumber;
-        private int userNumber; // Variável para armazenar o número digitado pelo usuário
-        List<string> JsonList = new List<string>();
+        private int userNumber;
+        private List<string> JsonList = new List<string>();
+        private TaskCompletionSource<int> _userInputTaskSource;
 
         public MainWindow()
         {
@@ -35,6 +39,17 @@ namespace SoundTest
             SuccessTimer.Interval = TimeSpan.FromSeconds(3); // 3 segundos para fechar após sucesso
             SuccessTimer.Tick += SuccessTimer_Tick;
 
+            StartCountDown();
+        }
+
+        private void Init()
+        {
+            countDown = 3;
+            Img_Init.Visibility = Visibility.Visible;
+            Img_Result.Visibility = Visibility.Hidden;
+            Btn_Try_Again.Visibility = Visibility.Hidden;
+            Lbl_Main.Content = "";
+            Txt_Result.Visibility = Visibility.Hidden;
             StartCountDown();
         }
 
@@ -55,6 +70,7 @@ namespace SoundTest
             {
                 countDown--;
                 Lbl_Main.Content = $"Iniciando teste de Áudio em...{countDown}";
+                Img_Init.Visibility = Visibility.Visible;
             }
             else
             {
@@ -65,27 +81,21 @@ namespace SoundTest
 
         public async Task<int> TestExecutionAsync()
         {
-            // Gerando um número aleatório entre 5 e 10
             Random random = new Random();
             randomNumber = random.Next(3, 9);
 
-            // Iniciando a síntese de fala
             using (SpeechSynthesizer synth = new SpeechSynthesizer())
             {
-                // Emitindo a fala do número aleatório
                 synth.Speak("O número aleatório é " + randomNumber);
             }
 
-            // Aumentando o volume do sistema
             IncreaseSystemVolume();
 
             return randomNumber;
         }
 
-        // Método para aumentar o volume do sistema
         private void IncreaseSystemVolume()
         {
-            // Enviando uma mensagem para aumentar o volume do sistema
             const int HWND_BROADCAST = 0xffff;
             const uint WM_APPCOMMAND = 0x319;
             const int APPCOMMAND_VOLUME_UP = 0x0a;
@@ -105,33 +115,55 @@ namespace SoundTest
                 Txt_Result.Visibility = Visibility.Visible;
                 Lbl_Main.Content = "Informe o número que você escutou";
 
-                // Limpa a caixa de texto antes de iniciar um novo teste
                 Txt_Result.Text = "";
-
-                // Reseta o número de tentativas
                 Tries = 3;
 
-                // Aguarda o usuário digitar o número
-                await WaitForUserInput();
+                await WaitForUserInputAsync();
 
-                // Verifica se o número digitado é igual ao número aleatório
                 if (userNumber == randomNumber)
                 {
-                    MessageBox.Show("Você acertou!");
+                    Lbl_Main.Content = "Teste finalizado com sucesso";
+                    Txt_Result.Visibility = Visibility.Hidden;
+                    string caminhoImagem = "success.png";
+                    Uri uriImagem = new Uri(caminhoImagem, UriKind.Relative);
+                    BitmapImage imagemSource = new BitmapImage(uriImagem);
+                    Img_Result.Source = imagemSource;
+                    Img_Result.Visibility = Visibility.Visible;
+
+                    StatusJson status = new StatusJson
+                    {
+                        Resultado = "Aprovado",
+                        Mensagem = "Saída de som está funcionando corretamente"
+                    };
+
+                    string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
+                    JsonList.Add(jsonString);
+                    JsonHandler.CreateStatusJson(jsonString);
+
+                    SuccessTimer.Start();
                 }
                 else
                 {
-                    MessageBox.Show("Você errou! Tente novamente.");
-                    if (--Tries == 0)
+                    Img_Init.Visibility = Visibility.Hidden;
+                    string caminhoImagem = "Errors.png";
+                    Txt_Result.Visibility = Visibility.Hidden;
+                    Uri uriImagem = new Uri(caminhoImagem, UriKind.Relative);
+                    BitmapImage imagemSource = new BitmapImage(uriImagem);
+                    Img_Result.Source = imagemSource;
+                    Img_Result.Visibility = Visibility.Visible;
+                    Lbl_Main.Content = "Teste finalizado com falha";
+
+                    StatusJson status = new StatusJson
                     {
-                        MessageBox.Show("Você esgotou suas tentativas.");
-                        Close();
-                    }
-                    else
-                    {
-                        // Reinicia o teste
-                        TestValidationAsync();
-                    }
+                        Resultado = "Reprovado",
+                        Mensagem = "Saída de som não está funcionando corretamente"
+                    };
+
+                    Btn_Try_Again.Visibility = Visibility.Visible;
+                    Btn_Try_Again.Content = $"Tentar Novamente {Tries}";
+                    string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
+                    JsonList.Add(jsonString);
+                    JsonHandler.CreateStatusJson(jsonString);
                 }
             }
             catch (Exception ex)
@@ -140,28 +172,60 @@ namespace SoundTest
             }
         }
 
-        private Task WaitForUserInput()
+        private async Task<int> WaitForUserInputAsync()
         {
-            var tcs = new TaskCompletionSource<object>();
+            _userInputTaskSource = new TaskCompletionSource<int>();
 
-            // Adiciona o manipulador de eventos PreviewTextInput
-            Txt_Result.PreviewTextInput += (sender, e) =>
+            Txt_Result.PreviewTextInput += Txt_Result_PreviewTextInput;
+
+            return await _userInputTaskSource.Task;
+        }
+
+        private void Txt_Result_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (int.TryParse(e.Text, out int digit))
             {
-                if (int.TryParse(e.Text, out int digit))
-                {
-                    Txt_Result.Text += digit.ToString();
-                    userNumber = int.Parse(Txt_Result.Text); // Atualiza o número digitado pelo usuário
-                }
-                e.Handled = true;
+                Txt_Result.Text += digit.ToString();
+                userNumber = int.Parse(Txt_Result.Text);
 
-                
                 if (Txt_Result.Text.Length >= randomNumber.ToString().Length)
                 {
-                    tcs.SetResult(null);
+                    Txt_Result.PreviewTextInput -= Txt_Result_PreviewTextInput;
+                    _userInputTaskSource.SetResult(userNumber);
                 }
-            };
+            }
+            e.Handled = true;
+        }
 
-            return tcs.Task;
+        private void Btn_Try_Again_Click(object sender, RoutedEventArgs e)
+        {
+            if (Tries > 0)
+            {
+                Init();
+                Tries--;
+            }
+            else
+            {
+                Close();
+            }
+        }
+
+    }
+
+    public class JsonHandler
+    {
+        public static void CreateStatusJson(string jsonString)
+        {
+            string directoryPath = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = Path.Combine(directoryPath, "status.json");
+
+            File.WriteAllText(filePath, jsonString);
+        }
+
+        public class StatusJson
+        {
+            public string Resultado { get; set; }
+            public string Mensagem { get; set; }
         }
     }
 }

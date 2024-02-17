@@ -10,14 +10,19 @@
 
   <ItemGroup>
     <None Remove="Audio.png" />
+    <None Remove="Errors.png" />
+    <None Remove="success.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Speech" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Audio.png" />
+    <Resource Include="Errors.png" />
+    <Resource Include="success.png" />
   </ItemGroup>
 
 </Project>

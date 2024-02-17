@@ -10,7 +10,9 @@
         <Label x:Name="Lbl_Main" HorizontalAlignment="Left" Margin="79,58,0,0" VerticalAlignment="Top" Height="53" Width="414" FontFamily="Bahnschrift SemiBold Condensed" FontSize="28" FontWeight="Bold"/>
         <Image x:Name="Img_Init" HorizontalAlignment="Center" Height="130" Margin="0,140,0,0" VerticalAlignment="Top" Width="180" Source="/Audio.png" Visibility="Hidden"/>
         <TextBox x:Name="Txt_Result" HorizontalAlignment="Center" Margin="0,174,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180" Height="26" Visibility="Hidden"/>
+        <Image x:Name="Img_Result" HorizontalAlignment="Left" Height="118" Margin="213,159,0,0" VerticalAlignment="Top" Width="120" Source="/Errors.png" Visibility="Hidden"/>
 
+        <Button x:Name="Btn_Try_Again" Content="Tentar Novamente" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" Height="46" Width="173" FontFamily="Bahnschrift SemiBold Condensed" Click="Btn_Try_Again_Click" Visibility="Hidden"/>
 
     </Grid>
 </Window>

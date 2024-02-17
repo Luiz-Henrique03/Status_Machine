@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RdRQjkI2u8tS0WNNTd60zvjiJeYEKzXkgVCTYciD1yn0cCv5s83XiR6Tub81oTvbVwl7nE/znKoA2k3YXOLAFg==",
+  "dgSpecHash": "04X7B2bdlifaJYkwR69In4mLLBeci+4YFSvKY30PJQJpAtPlCCIWLGMNCQA4DXdTJR2FTuv1lkSq01/09rc0yg==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\source\\repos\\SoundTest\\SoundTest\\SoundTest.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.speech\\8.0.0\\system.speech.8.0.0.nupkg.sha512"
   ],
   "logs": []

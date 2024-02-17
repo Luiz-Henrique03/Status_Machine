@@ -22,3 +22,4 @@ C:\Users\User\source\repos\SoundTest\SoundTest\bin\Debug\net8.0-windows\System.S
 C:\Users\User\source\repos\SoundTest\SoundTest\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Speech.dll
 C:\Users\User\source\repos\SoundTest\SoundTest\obj\Debug\net8.0-windows\SoundTest.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\SoundTest\SoundTest\obj\Debug\net8.0-windows\SoundTest.csproj.CopyComplete
+C:\Users\User\source\repos\SoundTest\SoundTest\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
