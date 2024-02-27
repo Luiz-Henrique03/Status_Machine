@@ -1,4 +1,6 @@
-﻿using System.Management;
+﻿using Newtonsoft.Json;
+using System.IO;
+using System.Management;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,6 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using static FanTest.JsonHandler;
+
 
 namespace FanTest
 {
@@ -35,6 +39,16 @@ namespace FanTest
             SuccessTimer.Interval = TimeSpan.FromSeconds(3); // 3 segundos para fechar após sucesso
             SuccessTimer.Tick += SuccessTimer_Tick;
 
+            StartCountDown();
+        }
+
+        private void Init()
+        {
+            countDown = 3;
+            Img_Init.Visibility = Visibility.Visible;
+            Img_result.Visibility = Visibility.Hidden;
+            Btn_Try_Again.Visibility = Visibility.Hidden;
+            Lbl_Main.Content = "";
             StartCountDown();
         }
 
@@ -111,11 +125,83 @@ namespace FanTest
 
         private async void TestValidationAsync()
         {
-            
+            Img_Init.Visibility = Visibility.Hidden;
             if (await TestExecutionTest())
             {
-                Lbl_Main.Content = "Fans funcionando com sucesso";
+                Lbl_Main.FontSize = 28;
+                Img_Init.Visibility = Visibility.Hidden;
+                Lbl_Main.Content = "Teste finalizado com sucesso";
+                string caminhoImagem = "success.png";
+                Uri uriImagem = new Uri(caminhoImagem, UriKind.Relative);
+                BitmapImage imagemSource = new BitmapImage(uriImagem);
+                Img_result.Source = imagemSource;
+                Img_result.Visibility = Visibility.Visible;
+
+                StatusJson status = new StatusJson
+                {
+                    Resultado = "Aprovado",
+                    Mensagem = "Computador enviou com sucesso pacote via ping"
+                };
+
+                string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
+                JsonList.Add(jsonString);
+                JsonHandler.CreateStatusJson(jsonString);
+
+                SuccessTimer.Start();
             }
+            else
+            {
+                Img_Init.Visibility = Visibility.Hidden;
+                string caminhoImagem = "Errors.png";
+                Uri uriImagem = new Uri(caminhoImagem, UriKind.Relative);
+                BitmapImage imagemSource = new BitmapImage(uriImagem);
+                Img_result.Source = imagemSource;
+                Img_result.Visibility = Visibility.Visible;
+                Lbl_Main.Content = "Teste finalizado com falha";
+
+                StatusJson status = new StatusJson
+                {
+                    Resultado = "Reprovado",
+                    Mensagem = "Computador não foi capaz de enviar pacote"
+                };
+
+                Btn_Try_Again.Visibility = Visibility.Visible;
+                Btn_Try_Again.Content = $"Tentar Novamente {Tries}";
+                string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
+                JsonList.Add(jsonString);
+                JsonHandler.CreateStatusJson(jsonString);
+            }
+        }
+
+        private void Btn_Try_Again_Click(object sender, RoutedEventArgs e)
+        {
+            if (Tries > 0)
+            {
+                Init();
+                Tries--;
+            }
+            else
+            {
+                Close();
+            }
+        }
+
+    }
+
+    public class JsonHandler
+    {
+        public static void CreateStatusJson(string jsonString)
+        {
+            string directoryPath = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = System.IO.Path.Combine(directoryPath, "status.json");
+
+            File.WriteAllText(filePath, jsonString);
+        }
+
+        public class StatusJson
+        {
+            public string Resultado { get; set; }
+            public string Mensagem { get; set; }
         }
     }
 }

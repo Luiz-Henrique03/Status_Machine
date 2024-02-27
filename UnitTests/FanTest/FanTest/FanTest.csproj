@@ -9,15 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Errors.png" />
     <None Remove="Fan.png" />
+    <None Remove="success.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Management" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Errors.png" />
     <Resource Include="Fan.png" />
+    <Resource Include="success.png" />
   </ItemGroup>
 
 </Project>

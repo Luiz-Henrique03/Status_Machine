@@ -22,3 +22,4 @@ C:\Users\User\source\repos\FanTest\FanTest\bin\Debug\net8.0-windows\System.Manag
 C:\Users\User\source\repos\FanTest\FanTest\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
 C:\Users\User\source\repos\FanTest\FanTest\obj\Debug\net8.0-windows\FanTest.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\FanTest\FanTest\obj\Debug\net8.0-windows\FanTest.csproj.CopyComplete
+C:\Users\User\source\repos\FanTest\FanTest\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
