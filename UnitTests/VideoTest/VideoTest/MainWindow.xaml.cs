@@ -47,6 +47,19 @@ namespace VideoTest
             StartCountDown();
         }
 
+        private void Init()
+        {
+            countDown = 3;
+            Rgb_Red.Visibility = Visibility.Collapsed;
+            Rgb_Blue.Visibility = Visibility.Collapsed;
+            Rgb_Green.Visibility = Visibility.Collapsed;
+
+            
+            Img_result.Visibility = Visibility.Hidden;
+            Btn_Try_Again.Visibility = Visibility.Hidden;
+            Lbl_Main.Content = "";
+            StartCountDown();
+        }
 
         private void StartCountDown()
         {
@@ -108,8 +121,16 @@ namespace VideoTest
 
         private void Btn_No_Click(object sender, RoutedEventArgs e)
         {
-            Btn_Try_Again.Visibility = Visibility.Hidden;
-            FullScreenTestAsync();
+            Lbl_Main.Visibility = Visibility.Collapsed;
+            Rgb_Red.Visibility = Visibility.Collapsed;
+            Rgb_Blue.Visibility = Visibility.Collapsed;
+            Rgb_Green.Visibility = Visibility.Collapsed;
+            Btn_Yes.Visibility = Visibility.Collapsed;
+            Btn_No.Visibility = Visibility.Collapsed;
+
+
+            Btn_Try_Again.Visibility = Visibility.Visible;
+            
         }
 
         private async Task FullScreenTestAsync()
@@ -166,7 +187,7 @@ namespace VideoTest
             StatusJson status = new StatusJson
             {
                 Resultado = "Aprovado",
-                Mensagem = "Computador enviou com sucesso pacote via ping"
+                Mensagem = "O video no computador está funcionando corretamente"
             };
 
             string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
@@ -176,6 +197,17 @@ namespace VideoTest
             SuccessTimer.Start();
         }
 
+        private void Btn_Try_Again_Click(object sender, RoutedEventArgs e)
+        {
+            if(Tries > 0)
+            {
+                Init();
+            }
+            else
+            {
+                App.Current.Shutdown();
+            }
+        }
     }
 
     public class JsonHandler
