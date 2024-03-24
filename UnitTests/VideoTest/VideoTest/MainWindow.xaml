@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideoTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="461" Width="543">
+        Title="MainWindow" Height="461" Width="543"
+        ResizeMode="NoResize" WindowStyle="None">
     <Grid>
         <Label 
             x:Name="Lbl_Main" HorizontalAlignment="Left" Margin="79,58,0,0" VerticalAlignment="Top" Height="53" Width="414" FontFamily="Bahnschrift SemiBold Condensed" FontSize="28" FontWeight="Bold"/>
@@ -15,6 +16,6 @@
         <Button x:Name="Btn_Yes" Content="SIM" HorizontalAlignment="Left" Margin="120,192,0,0" VerticalAlignment="Top" Height="31" Width="70" FontFamily="Bahnschrift SemiBold Condensed" Click="Btn_Yes_Click" Visibility="Hidden"/>
         <Button x:Name="Btn_No" Content="Não" HorizontalAlignment="Left" Margin="326,192,0,0" VerticalAlignment="Top" Height="31" Width="73" FontFamily="Bahnschrift SemiBold Condensed" Background="#FFD40000" Click="Btn_No_Click" Visibility="Hidden"/>
         <Button x:Name="Btn_Try_Again" Content="Tentar Novamente" HorizontalAlignment="Left" Margin="215,342,0,0" VerticalAlignment="Top" Height="28" Width="135" FontFamily="Bahnschrift SemiBold Condensed" Click="Btn_Try_Again_Click" Visibility="Hidden"/>
-        <Image x:Name="Img_result" HorizontalAlignment="Left" Height="132" Margin="190,160,0,0" VerticalAlignment="Top" Width="153" Source="/success.png" Visibility="Hidden"/>
+        <Image x:Name="Img_result" HorizontalAlignment="Left" Height="132" Margin="190,160,0,0" VerticalAlignment="Top" Width="153" Source="/Errors.png" Visibility="Hidden"/>
     </Grid>
 </Window>

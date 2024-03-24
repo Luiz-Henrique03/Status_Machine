@@ -128,10 +128,88 @@ namespace VideoTest
             Btn_Yes.Visibility = Visibility.Collapsed;
             Btn_No.Visibility = Visibility.Collapsed;
 
+            Btn_Yes.Visibility = Visibility.Hidden;
+            Btn_No.Visibility = Visibility.Hidden;
+
+            Lbl_Main.FontSize = 28;
+            string caminhoImagem = "errors.png";
+            Uri uriImagem = new Uri(caminhoImagem, UriKind.Relative);
+            BitmapImage imagemSource = new BitmapImage(uriImagem);
+            Img_result.Source = imagemSource;
+            Tries--;
+            Img_result.Visibility = Visibility.Visible;
+
+            StatusJson status;
+
+            Lbl_Main.Visibility = Visibility.Visible;
+
+            if (FullTestExecuted == false)
+            {
+                Lbl_Main.Content = "falha no teste de RGB";
+                status = new StatusJson
+                {
+                    Resultado = "Reprovado",
+                    Mensagem = "As cores no RGB no computador não está funcionando corretamente"
+                };
+            }
+            else
+            {
+                Lbl_Main.Content = "falha no teste de tela cheia";
+                status = new StatusJson
+                {
+                    Resultado = "Reprovado",
+                    Mensagem = "A tela cheia no computador não está funcionando corretamente"
+                };
+            }
+
+            string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
+            JsonList.Add(jsonString);
+            JsonHandler.CreateStatusJson(jsonString);
+
+            FullTestExecuted = false;
 
             Btn_Try_Again.Visibility = Visibility.Visible;
-            
         }
+
+        private void TestValidation()
+        {
+            Btn_Yes.Visibility = Visibility.Hidden;
+            Btn_No.Visibility = Visibility.Hidden;
+
+            Lbl_Main.FontSize = 28;
+            Lbl_Main.Content = "Teste finalizado com sucesso";
+            string caminhoImagem = "success.png";
+            Uri uriImagem = new Uri(caminhoImagem, UriKind.Relative);
+            BitmapImage imagemSource = new BitmapImage(uriImagem);
+            Img_result.Source = imagemSource;
+            Img_result.Visibility = Visibility.Visible;
+
+            StatusJson status = new StatusJson
+            {
+                Resultado = "Aprovado",
+                Mensagem = "O vídeo no computador está funcionando corretamente"
+            };
+
+            string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
+            JsonList.Add(jsonString);
+            JsonHandler.CreateStatusJson(jsonString);
+
+            // Inicie o SuccessTimer apenas quando o teste for bem-sucedido
+            SuccessTimer.Start();
+        }
+
+        private void Btn_Try_Again_Click(object sender, RoutedEventArgs e)
+        {
+            if (Tries > 0)
+            {
+                Init();
+            }
+            else
+            {
+                App.Current.Shutdown();
+            }
+        }
+
 
         private async Task FullScreenTestAsync()
         {
@@ -171,43 +249,8 @@ namespace VideoTest
             
         }
 
-        private void TestValidation()
-        {
-            Btn_Yes.Visibility = Visibility.Hidden;
-            Btn_No.Visibility = Visibility.Hidden;
 
-            Lbl_Main.FontSize = 28;
-            Lbl_Main.Content = "Teste finalizado com sucesso";
-            string caminhoImagem = "success.png";
-            Uri uriImagem = new Uri(caminhoImagem, UriKind.Relative);
-            BitmapImage imagemSource = new BitmapImage(uriImagem);
-            Img_result.Source = imagemSource;
-            Img_result.Visibility = Visibility.Visible;
-
-            StatusJson status = new StatusJson
-            {
-                Resultado = "Aprovado",
-                Mensagem = "O video no computador está funcionando corretamente"
-            };
-
-            string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
-            JsonList.Add(jsonString);
-            JsonHandler.CreateStatusJson(jsonString);
-
-            SuccessTimer.Start();
-        }
-
-        private void Btn_Try_Again_Click(object sender, RoutedEventArgs e)
-        {
-            if(Tries > 0)
-            {
-                Init();
-            }
-            else
-            {
-                App.Current.Shutdown();
-            }
-        }
+       
     }
 
     public class JsonHandler
