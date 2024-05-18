@@ -1,0 +1,18 @@
+﻿<Window x:Class="EthernetTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EthernetTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="461" Width="543" WindowStyle="None" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="Lbl_Main" HorizontalAlignment="Left" Margin="79,58,0,0" VerticalAlignment="Top" Height="53" Width="414" FontFamily="Bahnschrift SemiBold Condensed" FontSize="28" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="168" Margin="162,157,0,0" VerticalAlignment="Top" Width="179"/>
+        <Image x:Name="Img_Init" HorizontalAlignment="Left" Height="163" Margin="180,155,0,0" VerticalAlignment="Top" Width="201" Source="/Ethernet.png" Visibility="Hidden"/>
+        <Image x:Name="Img_result" HorizontalAlignment="Left" Height="185" Margin="182,138,0,0" VerticalAlignment="Top" Width="204" Source="/Errors.png" Visibility="Hidden"/>
+
+        <Button x:Name="Btn_Try_Again" Content="Tentar Novamente" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" Height="46" Width="173" FontFamily="Bahnschrift SemiBold Condensed" Click="Btn_Try_Again_Click" Visibility="Hidden"/>
+        
+    </Grid>
+</Window>

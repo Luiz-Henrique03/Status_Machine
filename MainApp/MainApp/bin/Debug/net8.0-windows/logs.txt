@@ -1,0 +1,750 @@
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStressTest\bin\CPUStressTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "CPU aprovada"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\EthernetTest\bin\EthernetTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\FanTest\bin\FanTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador com fans funcionando"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\bin\PingTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
+}
+
+Executável: C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\USBPortTest\bin\USBPortTest.exe
+{
+  "Resultado": "Aprovado",
+  "Mensagem": "Todas as portas USBs conectadas funcionando."
+}
+
