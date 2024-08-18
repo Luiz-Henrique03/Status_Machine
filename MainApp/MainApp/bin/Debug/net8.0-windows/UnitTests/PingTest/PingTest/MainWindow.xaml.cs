@@ -123,8 +123,8 @@ namespace PingTest
 
                 StatusJson status = new StatusJson
                 {
-                    result = "Aprovado",
-                    msg = "Computador enviou com sucesso pacote via ping"
+                    Resultado = "Aprovado",
+                    Mensagem = "Computador enviou com sucesso pacote via ping"
                 };
 
                 string jsonString = JsonConvert.SerializeObject(status, Formatting.Indented);
@@ -145,8 +145,8 @@ namespace PingTest
 
                 StatusJson status = new StatusJson
                 {
-                    result = "Reprovado",
-                    msg = "Computador não foi capaz de enviar pacote"
+                    Resultado = "Reprovado",
+                    Mensagem = "Computador não foi capaz de enviar pacote"
                 };
 
                 Btn_Try_Again.Visibility = Visibility.Visible;
@@ -183,8 +183,8 @@ namespace PingTest
 
         public class StatusJson
         {
-            public string result { get; set; }
-            public string msg { get; set; }
+            public string Resultado { get; set; }
+            public string Mensagem { get; set; }
         }
     }
 }

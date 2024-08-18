@@ -1,4 +1,4 @@
 {
-  "result": "Aprovado",
-  "msg": "Computador enviou com sucesso pacote via ping"
+  "Resultado": "Aprovado",
+  "Mensagem": "Computador enviou com sucesso pacote via ping"
 }

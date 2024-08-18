@@ -21,3 +21,5 @@ C:\Users\User\source\repos\PingTest\PingTest\obj\Debug\net8.0-windows\ref\PingTe
 C:\Users\User\source\repos\PingTest\PingTest\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\User\source\repos\PingTest\PingTest\obj\Debug\net8.0-windows\PingTest.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\PingTest\PingTest\obj\Debug\net8.0-windows\PingTest.csproj.CopyComplete
+C:\Users\User\source\repos\PingTest\PingTest\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\User\source\repos\PingTest\PingTest\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll

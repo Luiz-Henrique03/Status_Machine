@@ -1,4 +1,6 @@
 {
-  "result": "Aprovado",
-  "msg": "Computador enviou com sucesso pacote via ping"
+  "success": true,
+  "msg": "Ping aprovado",
+  "SN": "Default string",
+  "type": "Ping"
 }

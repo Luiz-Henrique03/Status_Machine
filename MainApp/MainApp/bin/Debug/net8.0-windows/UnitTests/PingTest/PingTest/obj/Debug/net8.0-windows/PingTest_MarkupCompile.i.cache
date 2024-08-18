@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\PingTest\obj\Debug\net8.0-windows\
+C:\Users\User\source\repos\PingTest\PingTest\obj\Debug\net8.0-windows\
 PingTest
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\PingTest\App.xaml
+C:\Users\User\source\repos\PingTest\PingTest\App.xaml
 11407045341
 
 6-1591532903
 199-1286936493
 MainWindow.xaml;
 
-False
+True
 

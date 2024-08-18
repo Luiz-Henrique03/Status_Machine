@@ -5,6 +5,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using System.Xml;
 using Newtonsoft.Json;
+using System.Management;
 using static EthernetTest.JsonHandler;
 
 namespace EthernetTest
@@ -127,6 +128,20 @@ namespace EthernetTest
             return false;
         }
 
+        private string GetSerial()
+        {
+            string serial = "Não disponível";
+
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_BIOS");
+            foreach (ManagementObject obj in searcher.Get())
+            {
+                serial = obj["SerialNumber"].ToString();
+                break;
+            }
+
+            return serial;
+        }
+
         public async Task TestValidationAsync()
         {
             if (await TestExecutionAsync())
@@ -142,8 +157,10 @@ namespace EthernetTest
 
                 StatusJson status = new StatusJson
                 {
-                    Resultado = "Aprovado",
-                    Mensagem = "Computador enviou com sucesso pacote via ping"
+                    success = true,
+                    msg = "Ethernet aprovado",
+                    SN = GetSerial(),
+                    type = "Ethernet"
                 };
 
                 string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
@@ -164,8 +181,10 @@ namespace EthernetTest
 
                 StatusJson status = new StatusJson
                 {
-                    Resultado = "Reprovado",
-                    Mensagem = "Computador não foi capaz de enviar pacote"
+                    success = false,
+                    msg = "Ethernet reprovado",
+                    SN = GetSerial(),
+                    type = "Ethernet"
                 };
 
                 Btn_Try_Again.Visibility = Visibility.Visible;
@@ -205,8 +224,11 @@ namespace EthernetTest
 
         public class StatusJson
         {
-            public string Resultado { get; set; }
-            public string Mensagem { get; set; }
+            public bool success { get; set; }
+            public string msg { get; set; }
+            public string SN { get; set; }
+
+            public string type { get; set; }
         }
     }
 }   

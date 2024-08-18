@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\MainApp\\MainApp\\bin\\Debug\\net8.0-windows\\UnitTests\\PingTest\\PingTest\\PingTest.csproj": {}
+    "C:\\Users\\User\\source\\repos\\PingTest\\PingTest\\PingTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\MainApp\\MainApp\\bin\\Debug\\net8.0-windows\\UnitTests\\PingTest\\PingTest\\PingTest.csproj": {
+    "C:\\Users\\User\\source\\repos\\PingTest\\PingTest\\PingTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MainApp\\MainApp\\bin\\Debug\\net8.0-windows\\UnitTests\\PingTest\\PingTest\\PingTest.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\PingTest\\PingTest\\PingTest.csproj",
         "projectName": "PingTest",
-        "projectPath": "C:\\Users\\User\\source\\repos\\MainApp\\MainApp\\bin\\Debug\\net8.0-windows\\UnitTests\\PingTest\\PingTest\\PingTest.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\PingTest\\PingTest\\PingTest.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\MainApp\\MainApp\\bin\\Debug\\net8.0-windows\\UnitTests\\PingTest\\PingTest\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\PingTest\\PingTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

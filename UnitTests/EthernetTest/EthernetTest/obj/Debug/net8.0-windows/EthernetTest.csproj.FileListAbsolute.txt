@@ -21,3 +21,5 @@ C:\Users\User\source\repos\EthernetTest\EthernetTest\obj\Debug\net8.0-windows\re
 C:\Users\User\source\repos\EthernetTest\EthernetTest\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\User\source\repos\EthernetTest\EthernetTest\obj\Debug\net8.0-windows\EthernetTest.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\EthernetTest\EthernetTest\obj\Debug\net8.0-windows\EthernetTest.csproj.CopyComplete
+C:\Users\User\source\repos\EthernetTest\EthernetTest\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\User\source\repos\EthernetTest\EthernetTest\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll

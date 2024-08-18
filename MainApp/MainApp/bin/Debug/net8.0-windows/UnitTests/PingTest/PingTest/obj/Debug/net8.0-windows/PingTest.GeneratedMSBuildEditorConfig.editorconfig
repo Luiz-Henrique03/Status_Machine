@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PingTest
-build_property.ProjectDir = C:\Users\User\source\repos\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\PingTest\PingTest\
+build_property.ProjectDir = C:\Users\User\source\repos\PingTest\PingTest\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

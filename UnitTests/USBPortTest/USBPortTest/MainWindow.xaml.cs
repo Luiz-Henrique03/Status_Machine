@@ -113,6 +113,19 @@ namespace USBPortTest
                 });
             }
         }
+         private string GetSerial()
+        {
+            string serial = "Não disponível";
+
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_BIOS");
+            foreach (ManagementObject obj in searcher.Get())
+            {
+                serial = obj["SerialNumber"].ToString();
+                break;
+            }
+
+            return serial;
+        }
 
         public void TestValidation(string result)
         {
@@ -120,8 +133,10 @@ namespace USBPortTest
             {
                 StatusJson status = new StatusJson
                 {
-                    Resultado = "Reprovado",
-                    Mensagem = "Porta USB com defeito"
+                    success = false,
+                    msg = "USB reprovado",
+                    SN = GetSerial(),
+                    type = "USB"
                 };
 
                 string jsonString = JsonConvert.SerializeObject(status);
@@ -145,8 +160,10 @@ namespace USBPortTest
             {
                 StatusJson status = new StatusJson
                 {
-                    Resultado = "Aprovado",
-                    Mensagem = "Todas as portas USBs conectadas funcionando."
+                    success = true,
+                    msg = "USB aprovado",
+                    SN = GetSerial(),
+                    type = "USB"
                 };
 
                 string jsonString = JsonConvert.SerializeObject(status, Formatting.Indented);
@@ -193,8 +210,11 @@ namespace USBPortTest
 
         public class StatusJson
         {
-            public string Resultado { get; set; }
-            public string Mensagem { get; set; }
+            public bool success { get; set; }
+            public string msg { get; set; }
+            public string SN { get; set; }
+
+            public string type { get; set; }
         }
     }
 }

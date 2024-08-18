@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using Newtonsoft.Json;
+using System.Management;
 using static PingTest.JsonHandler;
 
 namespace PingTest
@@ -109,6 +110,20 @@ namespace PingTest
             }
         }
 
+        private string GetSerial()
+        {
+            string serial = "Não disponível";
+
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_BIOS");
+            foreach (ManagementObject obj in searcher.Get())
+            {
+                serial = obj["SerialNumber"].ToString();
+                break;
+            }
+
+            return serial;
+        }
+
         public async Task TestValidationAsync()
         {
             if (await TestExecutionAsync())
@@ -123,8 +138,10 @@ namespace PingTest
 
                 StatusJson status = new StatusJson
                 {
-                    Resultado = "Aprovado",
-                    Mensagem = "Computador enviou com sucesso pacote via ping"
+                    success = true,
+                    msg = "Ping aprovado",
+                    SN = GetSerial(),
+                    type = "Ping"
                 };
 
                 string jsonString = JsonConvert.SerializeObject(status, Formatting.Indented);
@@ -145,10 +162,11 @@ namespace PingTest
 
                 StatusJson status = new StatusJson
                 {
-                    Resultado = "Reprovado",
-                    Mensagem = "Computador não foi capaz de enviar pacote"
+                    success = false,
+                    msg = "Ping reprovada",
+                    SN = GetSerial(),
+                    type = "Ping"
                 };
-
                 Btn_Try_Again.Visibility = Visibility.Visible;
                 Btn_Try_Again.Content = $"Tentar Novamente {Tries}";
                 string jsonString = JsonConvert.SerializeObject(status, Formatting.Indented);
@@ -183,8 +201,11 @@ namespace PingTest
 
         public class StatusJson
         {
-            public string Resultado { get; set; }
-            public string Mensagem { get; set; }
+            public bool success { get; set; }
+            public string msg { get; set; }
+            public string SN { get; set; }
+
+            public string type { get; set; }
         }
     }
 }
