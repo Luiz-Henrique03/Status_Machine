@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainApp"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="409" Width="579">
     <Grid>
-        <Button x:Name="Btn_Init" Content="Iniciar" HorizontalAlignment="Center" Margin="0,98,0,0" VerticalAlignment="Top" Height="72" Width="218" FontSize="22" FontFamily="Bahnschrift SemiBold Condensed" Click="Btn_init_Click"/>
         <Label x:Name="Lbl_Info" Content="Execute os testes unitários" HorizontalAlignment="Left" Margin="180,46,0,0" VerticalAlignment="Top" Height="33" Width="262" FontFamily="Bahnschrift SemiBold Condensed" FontSize="16"/>
-        <TextBox x:Name="status_info" HorizontalAlignment="Left" Margin="85,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="403" Height="115"/>
+        <TextBox x:Name="status_info" HorizontalAlignment="Left" Margin="85,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="403" Height="230"/>
+        <Label x:Name="CPUMonitor" Content="" HorizontalAlignment="Left" Margin="29,28,0,0" VerticalAlignment="Top" Height="51" Width="94" FontSize="18" FontFamily="Haettenschweiler"/>
 
     </Grid>
 </Window>
