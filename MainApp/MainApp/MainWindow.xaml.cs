@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
@@ -10,38 +10,78 @@ using Newtonsoft.Json.Linq;
 using System.Windows.Media;
 using System.Net.Sockets;
 using System.Net;
+using System.Windows.Forms; // Add this for NotifyIcon
+using Application = System.Windows.Application;
 
 namespace MainApp
 {
     public partial class MainWindow : Window
     {
         private readonly HttpClient httpClient;
+        private NotifyIcon trayIcon;
 
         public MainWindow()
         {
             InitializeComponent();
+            httpClient = new HttpClient { BaseAddress = new Uri("https://app-management-api.onrender.com/") };
 
-            httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri("https://app-management-api.onrender.com/");  
+            trayIcon = new NotifyIcon
+            {
+                Text = "Status Manager",
+                Icon = System.Drawing.SystemIcons.Application, // Replace with your own icon
+                Visible = true
+            };
 
-            Task.Run(() => SendInitialInfo());
+            var trayMenu = new ContextMenuStrip();
+            trayMenu.Items.Add("Open", null, ShowWindow);
+            trayMenu.Items.Add("Exit", null, ExitApplication);
+            trayIcon.ContextMenuStrip = trayMenu;
 
-            Task.Run(() => CheckServerForTasks());
+            this.Hide();
+
+            Task.Run(async () =>
+            {
+
+                await SendInitialInfo();
+                await CheckServerForTasks();
+                this.Hide();
+
+            });
         }
 
-       
+        private void ShowWindow(object sender, EventArgs e)
+        {
+            this.Show();
+            this.WindowState = WindowState.Normal;
+        }
+
+        private void ExitApplication(object sender, EventArgs e)
+        {
+            trayIcon.Visible = false; // Hide tray icon
+            Application.Current.Shutdown(); // Close the application
+        }
+
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true; // Prevent the application from closing
+            this.Hide(); // Hide the window instead
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            trayIcon.Visible = false; // Hide tray icon
+            base.OnClosed(e);
+        }
 
         private string GetSerial()
         {
             string serial = "Não disponível";
-
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_BIOS");
             foreach (ManagementObject obj in searcher.Get())
             {
                 serial = obj["SerialNumber"].ToString();
                 break;
             }
-
             return serial;
         }
 
@@ -63,12 +103,12 @@ namespace MainApp
             {
                 Console.WriteLine("Erro ao obter o endereço IP: " + ex.Message);
             }
-
             return localIP;
         }
 
         private async Task SendInitialInfo()
         {
+            
             try
             {
                 var initialInfo = new JObject
@@ -80,13 +120,13 @@ namespace MainApp
                 };
 
                 var content = new StringContent(initialInfo.ToString(), Encoding.UTF8, "application/json");
-
                 var response = await httpClient.PostAsync("/computer", content);
-
                 response.EnsureSuccessStatusCode();
 
+                // Exibir a janela após o envio inicial
                 Dispatcher.Invoke(() =>
                 {
+                    this.Show();
                     status_info.AppendText("Informações iniciais enviadas ao servidor.\n");
                 });
             }
@@ -104,6 +144,7 @@ namespace MainApp
                     status_info.AppendText($"Erro inesperado ao enviar informações iniciais para o servidor: {ex.Message}\n");
                 });
             }
+
         }
 
         private async Task CheckServerForTasks()
@@ -112,7 +153,7 @@ namespace MainApp
             {
                 try
                 {
-                    var response = await httpClient.GetAsync("/queue?status=1&SN="+GetSerial());
+                    var response = await httpClient.GetAsync("/queue?status=1&SN=" + GetSerial());
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -120,9 +161,7 @@ namespace MainApp
 
                         if (taskData.Trim().StartsWith("["))
                         {
-                            // É um array JSON
                             var jsonArray = JArray.Parse(taskData);
-
                             foreach (var jsonObject in jsonArray)
                             {
                                 await HandleTask(jsonObject);
@@ -154,13 +193,12 @@ namespace MainApp
             {
                 int status = (int)jsonObject["status"];
                 string method = jsonObject["method"].ToString();
-                string taskId = jsonObject["_id"].ToString();  // Pega o ID da tarefa
+                string taskId = jsonObject["_id"].ToString();
 
                 if (status == 1)
                 {
                     Dispatcher.Invoke(() => status_info.AppendText("Tarefa pendente recebida.\n"));
-
-                    await RunTests(method, taskId);  // Passa o método e o ID da tarefa
+                    await RunTests(method, taskId);
                 }
                 else if (status == 2)
                 {
@@ -181,15 +219,9 @@ namespace MainApp
         {
             try
             {
-                var statusUpdate = new JObject
-        {
-            { "status", status }
-        };
-
+                var statusUpdate = new JObject { { "status", status } };
                 var content = new StringContent(statusUpdate.ToString(), Encoding.UTF8, "application/json");
-
                 var response = await httpClient.PutAsync($"/queue/{taskId}", content);
-
                 response.EnsureSuccessStatusCode();
 
                 Dispatcher.Invoke(() =>
@@ -213,9 +245,6 @@ namespace MainApp
             }
         }
 
-       
-
-
         private async Task RunTests(string method, string taskId)
         {
             string BasePath = AppDomain.CurrentDomain.BaseDirectory;
@@ -223,7 +252,7 @@ namespace MainApp
 
             if (Directory.Exists(TestPath))
             {
-                string testDirectory = Path.Combine(TestPath, method);  // Busca a pasta baseada no método do servidor
+                string testDirectory = Path.Combine(TestPath, method);
                 if (Directory.Exists(testDirectory))
                 {
                     string pathTests = Path.Combine(testDirectory, "bin");
@@ -231,8 +260,7 @@ namespace MainApp
 
                     foreach (string executable in testExecutables)
                     {
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.FileName = executable;
+                        ProcessStartInfo startInfo = new ProcessStartInfo { FileName = executable };
 
                         using (Process process = Process.Start(startInfo))
                         {
@@ -244,7 +272,6 @@ namespace MainApp
                                 if (File.Exists(statusFilePath))
                                 {
                                     string statusContent = File.ReadAllText(statusFilePath);
-
                                     await Task.Delay(1);
 
                                     Dispatcher.Invoke(() =>
@@ -256,22 +283,16 @@ namespace MainApp
 
                                     var jsonObject = JObject.Parse(statusContent);
                                     var jsonString = jsonObject.ToString();
-
                                     await SendStatusToServer(jsonString);
-
-                                    // Após enviar o status, atualizar a tarefa para status 3 (concluído)
-                                    await UpdateTaskStatus(taskId, 3);  // Aqui fazemos o PUT com o ID e status 3
+                                    await UpdateTaskStatus(taskId, 3);
                                 }
                                 else
                                 {
                                     await Task.Delay(1);
-
                                     Dispatcher.Invoke(() =>
                                     {
                                         status_info.AppendText($"O arquivo status.json não foi encontrado em {testDirectory}.\n\n");
                                     });
-
-                                    // Atualizar a tarefa para status 2 (falha) se o arquivo status.json não for encontrado
                                     await UpdateTaskStatus(taskId, 2);
                                 }
                             }
@@ -284,8 +305,6 @@ namespace MainApp
                     {
                         status_info.AppendText($"O diretório do método {method} não foi encontrado.\n\n");
                     });
-
-                    // Atualizar a tarefa para status 2 (falha) se o diretório não for encontrado
                     await UpdateTaskStatus(taskId, 2);
                 }
             }
@@ -295,8 +314,6 @@ namespace MainApp
                 {
                     status_info.AppendText("O diretório de testes não foi encontrado.\n\n");
                 });
-
-                // Atualizar a tarefa para status 2 (falha) se o diretório de testes não for encontrado
                 await UpdateTaskStatus(taskId, 2);
             }
 
@@ -306,27 +323,21 @@ namespace MainApp
             });
         }
 
-
-
         private async Task SendStatusToServer(string statusContent)
         {
             try
             {
                 var content = new StringContent(statusContent, Encoding.UTF8, "application/json");
-
                 var response = await httpClient.PostAsync("/test", content);
-
                 response.EnsureSuccessStatusCode();
 
                 Dispatcher.Invoke(() =>
                 {
                     status_info.AppendText("Status enviado ao servidor\n");
 
-                    // Verifica se o JSON contém resultado aprovado
                     var jsonObject = JObject.Parse(statusContent);
                     if (jsonObject["resultado"]?.ToString() == "aprovado")
                     {
-                        // Fecha a aplicação em 3 segundos
                         var timer = new System.Timers.Timer(3000);
                         timer.Elapsed += (sender, e) => Application.Current.Dispatcher.Invoke(() => Application.Current.Shutdown());
                         timer.Start();
@@ -352,20 +363,13 @@ namespace MainApp
         private string GetComputerModel()
         {
             string model = "Não disponível";
-
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem");
             foreach (ManagementObject obj in searcher.Get())
             {
                 model = obj["Model"].ToString();
                 break;
             }
-
             return model;
-        }
-
-        protected override void OnClosed(EventArgs e)
-        {
-            base.OnClosed(e);
         }
     }
 }
