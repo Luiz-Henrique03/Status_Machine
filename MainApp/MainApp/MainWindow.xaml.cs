@@ -278,7 +278,7 @@ namespace MainApp
                                     {
                                         status_info.Text += "----------------------------------------------\n";
                                         status_info.Text += statusContent.Replace("{", "").Replace("}", "").Trim() + "\n";
-                                        status_info.Foreground = Brushes.Blue;
+                                        status_info.Foreground = System.Windows.Media.Brushes.Blue;
                                     });
 
                                     var jsonObject = JObject.Parse(statusContent);

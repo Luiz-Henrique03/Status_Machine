@@ -1,4 +1,6 @@
 {
-  "Resultado": "Aprovado",
-  "Mensagem": "CPU aprovada"
+  "success": true,
+  "msg": "CPU aprovada",
+  "SN": "87076905P",
+  "type": "CPUStress"
 }

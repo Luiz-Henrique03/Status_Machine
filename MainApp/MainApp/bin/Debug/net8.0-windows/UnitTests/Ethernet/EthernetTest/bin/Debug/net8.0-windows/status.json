@@ -1,4 +1,6 @@
 {
-  "Resultado": "Aprovado",
-  "Mensagem": "Computador com conexão via cabo Ehternet funcionando perfeitamente"
+  "success": false,
+  "msg": "Ethernet reprovada",
+  "SN": "87076905P",
+  "type": "Ethernet"
 }

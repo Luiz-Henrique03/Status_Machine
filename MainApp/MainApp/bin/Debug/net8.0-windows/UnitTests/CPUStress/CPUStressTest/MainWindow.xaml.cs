@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using System.Management;
 using static CPUStressTest.JsonHandler;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -142,6 +143,18 @@ namespace CPUStressTest
             }
         }
 
+        private string GetSerial()
+        {
+            string serial = "Não disponível";
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_BIOS");
+            foreach (ManagementObject obj in searcher.Get())
+            {
+                serial = obj["SerialNumber"].ToString();
+                break;
+            }
+            return serial;
+        }
+
 
         public async Task TestValidationAsync()
         {
@@ -161,8 +174,10 @@ namespace CPUStressTest
 
                 StatusJson status = new StatusJson
                 {
-                    Resultado = "Aprovado",
-                    Mensagem = "CPU aprovada"
+                      success = true,
+                      msg = "CPU aprovada",
+                      SN = GetSerial(),
+                      type = "CPUStress"
                 };
 
                 string jsonString = JsonConvert.SerializeObject(status, Newtonsoft.Json.Formatting.Indented);
@@ -183,8 +198,10 @@ namespace CPUStressTest
 
                 StatusJson status = new StatusJson
                 {
-                    Resultado = "Reprovado",
-                    Mensagem = "CPU ão foi capaz de liidar com o teste"
+                    success = false,
+                    msg = "CPU reprovada",
+                    SN = GetSerial(),
+                    type = "CPUStress"
                 };
 
                 Btn_Try_Again.Visibility = Visibility.Visible;
@@ -220,9 +237,12 @@ namespace CPUStressTest
 
         public class StatusJson
         {
-            public string Resultado { get; set; }
-            public string Mensagem { get; set; }
+            public bool success { get; set; }
+            public string msg { get; set; }
+            public string SN { get; set; }
+            public string type { get; set; }
         }
+
     }
 
 }

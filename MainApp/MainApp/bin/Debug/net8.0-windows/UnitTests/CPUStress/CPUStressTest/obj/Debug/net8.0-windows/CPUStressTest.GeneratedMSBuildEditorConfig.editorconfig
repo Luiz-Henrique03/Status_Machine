@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CPUStressTest
-build_property.ProjectDir = C:\Users\User\source\repos\CPUStressTest\CPUStressTest\
+build_property.ProjectDir = C:\Users\Policorp\Desktop\Status_Machine\MainApp\MainApp\bin\Debug\net8.0-windows\UnitTests\CPUStress\CPUStressTest\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
